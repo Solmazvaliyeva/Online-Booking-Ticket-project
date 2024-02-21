@@ -24,10 +24,16 @@ public class AuthenticationController {
 
     private final AuthenticationService service;
 
-    @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequest request){
-        return ResponseEntity.ok(service.register(request));
+    @PostMapping("/register/user")
+    public ResponseEntity<AuthenticationResponse> registerUser(@RequestBody RegisterRequest request){
+        return ResponseEntity.ok(service.registerUser(request));
     }
+
+    @PostMapping("/register/admin")
+    public ResponseEntity<AuthenticationResponse> registerAdmin(@RequestBody RegisterRequest request){
+        return ResponseEntity.ok(service.registerAdmin(request));
+    }
+
 
 
     @ApiResponses(value = {
