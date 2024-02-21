@@ -11,10 +11,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/auth")
@@ -26,6 +23,7 @@ public class AuthenticationController {
 
     @PostMapping("/register/user")
     public ResponseEntity<AuthenticationResponse> registerUser(@RequestBody RegisterRequest request){
+        System.out.println("iceri girdim");
         return ResponseEntity.ok(service.registerUser(request));
     }
 
@@ -33,6 +31,15 @@ public class AuthenticationController {
     public ResponseEntity<AuthenticationResponse> registerAdmin(@RequestBody RegisterRequest request){
         return ResponseEntity.ok(service.registerAdmin(request));
     }
+
+    @GetMapping("/login/admin")
+    public ResponseEntity<AuthenticationResponse> loginAdmin(@PathVariable String email ,@PathVariable
+                                                             String password){
+
+        return null;
+        //return ResponseEntity.ok(service.registerAdmin(request));
+    }
+
 
 
 

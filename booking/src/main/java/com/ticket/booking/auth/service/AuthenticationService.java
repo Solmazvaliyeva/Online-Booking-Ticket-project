@@ -33,6 +33,8 @@ public class AuthenticationService {
                 .role(Role.USER)
 
                 .build();
+
+        System.out.println("iceri girdim2");
         repository.save(user);
         var jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse.builder()
@@ -72,4 +74,8 @@ public class AuthenticationService {
                 .build();
 
     }
+
+
+
+
 }
