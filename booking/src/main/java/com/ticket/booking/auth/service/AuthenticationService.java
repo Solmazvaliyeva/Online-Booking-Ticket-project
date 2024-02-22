@@ -5,6 +5,7 @@ import com.ticket.booking.auth.dao.AuthenticationResponse;
 import com.ticket.booking.auth.dao.RegisterRequest;
 import com.ticket.booking.auth.dao.User;
 import com.ticket.booking.auth.dao.Role;
+import com.ticket.booking.exception.NoDataFoundException;
 import com.ticket.booking.repository.UserRepository;
 import com.ticket.booking.securityconfig.JwtService;
 import lombok.RequiredArgsConstructor;
@@ -66,7 +67,8 @@ public class AuthenticationService {
                 new UsernamePasswordAuthenticationToken(request.getEmail() ,request.getPassword());
         System.out.println("token " + token);
 
-        var user = repository.findByEmail(request.getEmail()).orElseThrow();
+        var user = repository.findByEmail(request.getEmail()).orElseThrow(() ->
+                new NoDataFoundException("Email not found at system.Do you want to sign up?"));
         System.out.println("user +" + user);
         var jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse.builder()
