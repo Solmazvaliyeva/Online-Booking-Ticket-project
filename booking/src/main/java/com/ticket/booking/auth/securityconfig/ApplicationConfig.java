@@ -1,7 +1,7 @@
-package com.ticket.booking.securityconfig;
+package com.ticket.booking.auth.securityconfig;
 
 
-import com.ticket.booking.repository.UserRepository;
+import com.ticket.booking.auth.dao.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

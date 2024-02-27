@@ -1,8 +1,8 @@
 package com.ticket.booking.auth.controller;
 
-import com.ticket.booking.auth.dao.AuthenticationRequest;
-import com.ticket.booking.auth.dao.AuthenticationResponse;
-import com.ticket.booking.auth.dao.RegisterRequest;
+import com.ticket.booking.auth.model.AuthenticationRequest;
+import com.ticket.booking.auth.model.AuthenticationResponse;
+import com.ticket.booking.auth.model.RegisterRequest;
 import com.ticket.booking.auth.service.AuthenticationService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;

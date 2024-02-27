@@ -1,4 +1,4 @@
-package com.ticket.booking.auth.dao;
+package com.ticket.booking.auth.model;
 
 
 import lombok.AllArgsConstructor;

@@ -1,13 +1,13 @@
 package com.ticket.booking.auth.service;
 
-import com.ticket.booking.auth.dao.AuthenticationRequest;
-import com.ticket.booking.auth.dao.AuthenticationResponse;
-import com.ticket.booking.auth.dao.RegisterRequest;
+import com.ticket.booking.auth.model.AuthenticationRequest;
+import com.ticket.booking.auth.model.AuthenticationResponse;
+import com.ticket.booking.auth.model.RegisterRequest;
 import com.ticket.booking.auth.dao.User;
 import com.ticket.booking.auth.dao.Role;
 import com.ticket.booking.exception.NoDataFoundException;
-import com.ticket.booking.repository.UserRepository;
-import com.ticket.booking.securityconfig.JwtService;
+import com.ticket.booking.auth.dao.UserRepository;
+import com.ticket.booking.auth.securityconfig.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

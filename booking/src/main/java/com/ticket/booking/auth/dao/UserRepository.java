@@ -1,4 +1,4 @@
-package com.ticket.booking.repository;
+package com.ticket.booking.auth.dao;
 
 import com.ticket.booking.auth.dao.User;
 import org.springframework.data.jpa.repository.JpaRepository;

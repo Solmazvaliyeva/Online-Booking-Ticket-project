@@ -1,4 +1,4 @@
-package com.ticket.booking.securityconfig;
+package com.ticket.booking.auth.securityconfig;
 
 
 import io.jsonwebtoken.Claims;
